@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even-Odd Checker</title>
+</head>
+<body>
+    <input type="number" placeholder="Enterthe number..." id="input-value">
+    <p style="text-align: center; margin-top: 300px;" id="para"></p>
+
+    <script>
+     let inputValue = document.getElementById('input-value');
+     let para = document.getElementById('para');
+     inputValue.addEventListener('input', function() {
+        let input = this.value;
+
+        if(input%2==0) {
+       para.textContent = `${input} is a Even Number`;
+        } 
+        else {
+            para.textContent = `${input} is a Odd Number`;
+        }
+     })
+    </script>
+</body>
+</html>
